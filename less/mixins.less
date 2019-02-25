@@ -1,1 +1,56 @@
 // Mixins Here
+
+//custom navigation for navigaton page
+.custom-nav(){ 
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:@border-real;
+ 
+
+}
+
+//custom a tag
+
+.custom-atag(){
+    margin-left: 20px;
+    color:@waterloo;
+    text-decoration: none;
+    
+
+}
+
+
+
+
+//Paremeters mixin - style for button
+
+.custom-button(@bg-color:@ebony-clay, @width:20px, @font-color:white ){
+    display:flex;
+    justify-content:center;
+    flex-direction: row; 
+    width:@width;
+    padding:10px 20%;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    color:@font-color;
+    background-color:@ebony-clay;
+
+    &:hover{
+        background-color:green;
+        color:orange;
+        font-size: 2rem;
+        cursor:pointer;
+    }
+
+    @media @phone{
+        background-color:@ebony-clay;
+        color: white;
+        width: 370px;
+        padding:20px;
+        border-radius: 5px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+}
+
